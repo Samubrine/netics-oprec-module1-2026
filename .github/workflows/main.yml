@@ -50,12 +50,12 @@ jobs:
 
       - name: Update inventory with VPS IP
         run: |
-          sed -i 's/your_vps_ip/${{ secrets.VPS_HOST }}/' ansible/inventory.ini
+          sed -i 's/your_vps_ip/${{ secrets.VPS_HOST }}/' src/ansible/inventory.ini
 
       - name: Update image name in playbook
         run: |
-          sed -i 's/your_dockerhub_username/${{ secrets.DOCKER_USERNAME }}/' ansible/playbook.yml
+          sed -i 's/your_dockerhub_username/${{ secrets.DOCKER_USERNAME }}/' src/ansible/playbook.yml
 
       - name: Run Ansible Playbook
         run: |
-          ansible-playbook -i ansible/inventory.ini ansible/playbook.yml
+          ansible-playbook -i ansible/inventory.ini src/ansible/playbook.yml
