@@ -8,7 +8,7 @@ start_time = time.time()
 @app.get("/health")
 async def health():
     return {
-        "nama": "Mikail Ibrahim Hakim",
+        "nama": "test",
         "nrp": "5025241046",
         "status": "UP",
         "timestamp": datetime.now().isoformat(),
