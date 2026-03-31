@@ -38,7 +38,7 @@
 
     - name: Run Docker container
       community.docker.docker_container:
-        name: "{{ container_name }}"
+        name: "{{ container_name }}" 
         image: "{{ image_name }}"
         state: started
         restart_policy: always
